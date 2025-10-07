@@ -3,6 +3,7 @@ Generate PNG image of MSD directory tree structure
 Saves to: report/supplementary/msd_directory_tree.png
 """
 
+import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
@@ -71,7 +72,11 @@ def create_tree_png():
             verticalalignment='top', linespacing=1.5)
     
     # Save the figure
-    output_path = 'report/supplementary/msd_directory_tree.png'
+    output_path = '../report/supplementary/msd_directory_tree.png'
+    
+    # Ensure directory exists before saving
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
     plt.tight_layout()
     plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
