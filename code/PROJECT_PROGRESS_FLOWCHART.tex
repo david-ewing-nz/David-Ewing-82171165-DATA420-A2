@@ -1,0 +1,396 @@
+\documentclass[10pt]{article}
+
+% Custom page size - very long page to fit everything vertically
+\usepackage[paperwidth=8.5in, paperheight=40in, margin=0.5in]{geometry}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, calc}
+\usepackage{fontspec}
+\setmainfont{DejaVu Sans Mono}[Scale=0.9]
+% If DejaVu Sans Mono doesn't work, try: Courier New, Liberation Mono, or comment out fontspec lines
+
+% Define colors
+\definecolor{completed}{RGB}{46, 204, 113}
+\definecolor{inprogress}{RGB}{52, 152, 219}
+\definecolor{pending}{RGB}{149, 165, 166}
+\definecolor{current}{RGB}{241, 196, 15}
+\definecolor{error}{RGB}{231, 76, 60}
+\definecolor{fixed}{RGB}{26, 188, 156}
+
+% Define block styles
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!20, font=\small]
+\tikzstyle{completed_block} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=completed!30, font=\small]
+\tikzstyle{current_block} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=current!40, font=\small, line width=2pt]
+\tikzstyle{pending_block} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=pending!20, font=\small]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{section_title} = [rectangle, minimum width=7cm, minimum height=0.8cm, text centered, font=\bfseries\large, fill=gray!20]
+
+\begin{document}
+
+\begin{center}
+\Huge\bfseries DATA420 Assignment 2 - Progress Overview\\[0.3cm]
+\Large October 9, 2025\\[0.5cm]
+\end{center}
+
+\begin{tikzpicture}[node distance=1.2cm, scale=0.95, transform shape]
+
+% ============================================================================
+% TITLE AND METADATA
+% ============================================================================
+\node (title) [section_title] {\huge Assignment Structure \& Progress};
+
+\node (metadata) [below=0.3cm of title, text width=7cm, align=center, font=\small] {
+    \textbf{Repository:} David-Ewing-82171165-DATA420-A2\\
+    \textbf{Branch:} main (commit: d2a7f0a)\\
+    \textbf{Current File:} 20251009A-A2-Processing.ipynb\\
+    \textbf{Status:} Q2 Complete, Executed Successfully
+};
+
+% ============================================================================
+% SECTION 1: DATA PROCESSING (20% of Assignment)
+% ============================================================================
+\node (proc_title) [section_title, below=1cm of metadata] {SECTION 1: DATA PROCESSING (20\%)};
+
+% Q1 - Directory Tree and Statistics
+\node (q1_title) [completed_block, below=0.5cm of proc_title, text width=6cm] {
+    \textbf{Q1: Directory Tree \& Statistics}\\
+    \textcolor{completed}{\textbf{✓ COMPLETE}}
+};
+
+\node (q1_a) [completed_block, below=0.3cm of q1_title, text width=5.5cm] {
+    Q1(a): Create directory tree diagram\\
+    Output: msd\_directory\_tree.png
+};
+
+\node (q1_b) [completed_block, below=0.3cm of q1_a, text width=5.5cm] {
+    Q1(b): Compute file statistics\\
+    Files: 9 datasets analyzed
+};
+
+\node (q1_c) [completed_block, below=0.3cm of q1_b, text width=5.5cm] {
+    Q1(c): Display as formatted table\\
+    Columns: 11 attributes per dataset
+};
+
+% Q2 - Audio Feature Processing
+\node (q2_title) [completed_block, below=0.8cm of q1_c, text width=6cm] {
+    \textbf{Q2: Audio Feature Processing}\\
+    \textcolor{completed}{\textbf{✓ COMPLETE \& EXECUTED}}
+};
+
+\node (q2_a) [completed_block, below=0.3cm of q2_title, text width=5.5cm] {
+    Q2(a): Attribute Analysis\\
+    • Parse 9 datasets (3929 total columns)\\
+    • Collision detection (0 found)\\
+    • Type mapping (string/real)
+};
+
+\node (q2_b) [completed_block, below=0.3cm of q2_a, text width=5.5cm] {
+    Q2(b): Automatic Schema Generation\\
+    • Helper: create\_struct\_type\_from\_attributes()\\
+    • Generated 4 schemas (185 total fields)\\
+    • Types: StringType, DoubleType
+};
+
+\node (q2_c) [completed_block, below=0.3cm of q2_b, text width=5.5cm] {
+    Q2(c): Column Naming Discussion\\
+    • Advantages: self-documenting, traceable\\
+    • Disadvantages: too long (avg 18, max 108)\\
+    • Conclusion: systematic renaming needed
+};
+
+\node (q2_d) [completed_block, below=0.3cm of q2_c, text width=5.5cm] {
+    Q2(d): Systematic Column Renaming\\
+    • Naming format: \{AA\}\{NNN\} (5 chars fixed)\\
+    • Helper: rename\_audio\_columns()\\
+    • 4 datasets renamed (180 features)\\
+    • 72\% character reduction\\
+    • Mapping CSV: audio\_column\_name\_mapping.csv
+};
+
+% Naming Convention Details
+\node (naming) [completed_block, below=0.5cm of q2_d, text width=6cm, fill=fixed!20] {
+    \textbf{Column Naming Convention}\\
+    \texttt{AO} = Area-Of-moments (AO001--AO020)\\
+    \texttt{LP} = LPc (LP001--LP020)\\
+    \texttt{SP} = SPectral-all (SP001--SP016)\\
+    \texttt{TI} = TImbral (TI001--TI124)\\
+    \texttt{MSD\_TRACKID} preserved as join key
+};
+
+% ============================================================================
+% SECTION 2: AUDIO SIMILARITY (40% of Assignment)
+% ============================================================================
+\node (audio_title) [section_title, below=1cm of naming] {SECTION 2: AUDIO SIMILARITY (40\%)};
+
+\node (audio_status) [current_block, below=0.3cm of audio_title, text width=6cm] {
+    \textbf{CURRENT FOCUS}\\
+    Starting Audio Similarity Analysis
+};
+
+% Q1 - Binary Classification
+\node (as_q1_title) [pending_block, below=0.5cm of audio_status, text width=6cm] {
+    \textbf{Q1: Binary Classification Prep}\\
+    Status: PENDING
+};
+
+\node (as_q1_a) [pending_block, below=0.3cm of as_q1_title, text width=5.5cm] {
+    Q1(a): Load 4 renamed datasets\\
+    Use: renamed\_dfs dict from Q2(d)
+};
+
+\node (as_q1_b) [pending_block, below=0.3cm of as_q1_a, text width=5.5cm] {
+    Q1(b): Create correlation heatmap\\
+    Output: Figure 2 (correlation matrix)\\
+    Identify highly correlated features
+};
+
+\node (as_q1_c) [pending_block, below=0.3cm of as_q1_b, text width=5.5cm] {
+    Q1(c): Remove correlated features\\
+    Threshold: |correlation| > 0.9\\
+    Create reduced feature set
+};
+
+\node (as_q1_d) [pending_block, below=0.3cm of as_q1_c, text width=5.5cm] {
+    Q1(d): Join datasets + popularity\\
+    Merge on MSD\_TRACKID\\
+    Create binary labels (popular/not)
+};
+
+% Q2 - Model Training
+\node (as_q2_title) [pending_block, below=0.8cm of as_q1_d, text width=6cm] {
+    \textbf{Q2: Binary Classification Models}\\
+    Status: PENDING
+};
+
+\node (as_q2_models) [pending_block, below=0.3cm of as_q2_title, text width=5.5cm] {
+    Train 3 models:\\
+    • Logistic Regression\\
+    • Random Forest\\
+    • Gradient-Boosted Trees
+};
+
+\node (as_q2_eval) [pending_block, below=0.3cm of as_q2_models, text width=5.5cm] {
+    Evaluate with:\\
+    • ROC-AUC scores\\
+    • Confusion matrices\\
+    • Feature importance
+};
+
+% Q3 - Multiclass Classification
+\node (as_q3_title) [pending_block, below=0.8cm of as_q2_eval, text width=6cm] {
+    \textbf{Q3: Multiclass Genre Classification}\\
+    Status: PENDING
+};
+
+\node (as_q3_prep) [pending_block, below=0.3cm of as_q3_title, text width=5.5cm] {
+    Prepare genre labels:\\
+    • Load genre\_dataset\\
+    • Join with audio features\\
+    • Handle class imbalance
+};
+
+\node (as_q3_models) [pending_block, below=0.3cm of as_q3_prep, text width=5.5cm] {
+    Train multiclass models:\\
+    • Same 3 algorithms\\
+    • OneVsRest strategy\\
+    • Per-genre metrics
+};
+
+% ============================================================================
+% SECTION 3: SONG RECOMMENDATIONS (40% of Assignment)
+% ============================================================================
+\node (rec_title) [section_title, below=1cm of as_q3_models] {SECTION 3: SONG RECOMMENDATIONS (40\%)};
+
+\node (rec_q1) [pending_block, below=0.3cm of rec_title, text width=6cm] {
+    \textbf{Q1: ALS Collaborative Filtering}\\
+    Matrix factorization for recommendations
+};
+
+\node (rec_q2) [pending_block, below=0.3cm of rec_q1, text width=6cm] {
+    \textbf{Q2: Content-Based Filtering}\\
+    Audio feature similarity recommendations
+};
+
+\node (rec_q3) [pending_block, below=0.3cm of rec_q2, text width=6cm] {
+    \textbf{Q3: Hybrid Approach}\\
+    Combine collaborative + content-based
+};
+
+\node (rec_q4) [pending_block, below=0.3cm of rec_q3, text width=6cm] {
+    \textbf{Q4: Evaluation \& Comparison}\\
+    Compare all recommendation strategies
+};
+
+% ============================================================================
+% FILE HISTORY AND COMMITS
+% ============================================================================
+\node (files_title) [section_title, below=1cm of rec_q4] {FILE HISTORY \& COMMITS};
+
+\node (file_20251008c) [completed_block, below=0.3cm of files_title, text width=6cm] {
+    \textbf{20251008C-A2-Processing.ipynb}\\
+    Commit: 36d216c\\
+    Q1 + Q2(a) with outputs
+};
+
+\node (file_20251008d) [completed_block, below=0.3cm of file_20251008c, text width=6cm] {
+    \textbf{20251008D-A2-Processing.ipynb}\\
+    Commit: fc7dfe4 → d2a7f0a\\
+    Added Q2(b), Q2(c), Q2(d)\\
+    Fixed cprint() errors
+};
+
+\node (file_20251009a) [current_block, below=0.3cm of file_20251008d, text width=6cm] {
+    \textbf{20251009A-A2-Processing.ipynb}\\
+    \textbf{CURRENT WORKING FILE}\\
+    All Q2 executed successfully\\
+    Ready for Audio Similarity section
+};
+
+% ============================================================================
+% KEY ARTIFACTS
+% ============================================================================
+\node (artifacts_title) [section_title, below=1cm of file_20251009a] {KEY ARTIFACTS GENERATED};
+
+\node (artifact1) [completed_block, below=0.3cm of artifacts_title, text width=6cm] {
+    \texttt{msd\_directory\_tree.png}\\
+    Visual directory structure (Q1a)
+};
+
+\node (artifact2) [completed_block, below=0.3cm of artifact1, text width=6cm] {
+    \texttt{audio\_column\_name\_mapping.csv}\\
+    185 rows: original → new column names (Q2d)
+};
+
+\node (artifact3) [completed_block, below=0.3cm of artifact2, text width=6cm] {
+    \texttt{renamed\_dfs} dictionary\\
+    4 DataFrames with renamed columns\\
+    Keys: 'AO', 'LP', 'SP', 'TI'
+};
+
+\node (artifact4) [completed_block, below=0.3cm of artifact3, text width=6cm] {
+    \texttt{schemas} dictionary\\
+    4 StructType schemas for CSV loading\\
+    Automatic type mapping applied
+};
+
+\node (artifact5) [completed_block, below=0.3cm of artifact4, text width=6cm] {
+    \texttt{all\_mappings} dictionary\\
+    Column name translation tables\\
+    Per-dataset mapping preservation
+};
+
+% ============================================================================
+% HELPER FUNCTIONS INVENTORY
+% ============================================================================
+\node (helpers_title) [section_title, below=1cm of artifact5] {HELPER FUNCTIONS (Cell 8, Lines 253--1078)};
+
+\node (helper1) [completed_block, below=0.3cm of helpers_title, text width=6cm, font=\footnotesize] {
+    \texttt{create\_struct\_type\_from\_attributes()}\\
+    Maps attribute lists to Spark StructType schemas
+};
+
+\node (helper2) [completed_block, below=0.3cm of helper1, text width=6cm, font=\footnotesize] {
+    \texttt{rename\_audio\_columns(df, code, keep\_msd)}\\
+    Renames columns to \{AA\}\{NNN\} format\\
+    Returns: (renamed\_df, mapping\_dict)
+};
+
+\node (helper3) [completed_block, below=0.3cm of helper2, text width=6cm, font=\footnotesize] {
+    Plus 20+ additional helpers from Q1/Q2(a):\\
+    • hprint() - formatted headers\\
+    • File size calculation functions\\
+    • Table formatting utilities
+};
+
+% ============================================================================
+% EXECUTION METRICS
+% ============================================================================
+\node (metrics_title) [section_title, below=1cm of helper3] {EXECUTION METRICS};
+
+\node (metric1) [completed_block, below=0.3cm of metrics_title, text width=6cm] {
+    \textbf{Total Cells:} 36\\
+    \textbf{Cells Executed:} 36\\
+    \textbf{Errors:} 0
+};
+
+\node (metric2) [completed_block, below=0.3cm of metric1, text width=6cm] {
+    \textbf{Datasets Processed:} 9 analyzed, 4 renamed\\
+    \textbf{Total Columns:} 3929 original → 185 renamed\\
+    \textbf{Character Reduction:} 72\%
+};
+
+\node (metric3) [completed_block, below=0.3cm of metric2, text width=6cm] {
+    \textbf{Features by Dataset:}\\
+    AO: 20 | LP: 20 | SP: 16 | TI: 124\\
+    \textbf{Join Key:} MSD\_TRACKID (preserved)
+};
+
+% ============================================================================
+% NEXT IMMEDIATE STEPS
+% ============================================================================
+\node (next_title) [section_title, below=1cm of metric3, fill=current!40] {NEXT IMMEDIATE STEPS};
+
+\node (next1) [current_block, below=0.3cm of next_title, text width=6cm] {
+    \textbf{1. Download Mapping CSV}\\
+    From Spark → local repository\\
+    Path: report/supplementary/
+};
+
+\node (next2) [pending_block, below=0.3cm of next1, text width=6cm] {
+    \textbf{2. Commit 20251009A with Outputs}\\
+    git add + commit + push\\
+    Include executed notebook
+};
+
+\node (next3) [pending_block, below=0.3cm of next2, text width=6cm] {
+    \textbf{3. Start Audio Similarity Q1(a)}\\
+    Load renamed\_dfs datasets\\
+    Begin correlation analysis
+};
+
+\node (next4) [pending_block, below=0.3cm of next3, text width=6cm] {
+    \textbf{4. Create Figure 2}\\
+    Correlation heatmap visualization\\
+    Identify features to remove
+};
+
+% ============================================================================
+% PROGRESS BAR
+% ============================================================================
+\node (progress_title) [section_title, below=1cm of next4] {OVERALL PROGRESS};
+
+\node (progress_bar) [below=0.3cm of progress_title, text width=6cm, align=left, font=\small] {
+    \textbf{Processing:} \textcolor{completed}{█████████████████████} 100\%\\[0.2cm]
+    \textbf{Audio Similarity:} \textcolor{pending}{░░░░░░░░░░░░░░░░░░░░░} 0\%\\[0.2cm]
+    \textbf{Recommendations:} \textcolor{pending}{░░░░░░░░░░░░░░░░░░░░░} 0\%\\[0.2cm]
+    \textbf{Overall:} \textcolor{completed}{████}\textcolor{pending}{░░░░░░░░░░░░░░░░░} 20\%
+};
+
+% ============================================================================
+% LEGEND
+% ============================================================================
+\node (legend_title) [section_title, below=1cm of progress_bar] {LEGEND};
+
+\node (legend) [below=0.3cm of legend_title, text width=6cm, align=left, font=\small] {
+    \textcolor{completed}{█} \textbf{Completed} - Executed and verified\\
+    \textcolor{current}{█} \textbf{Current Focus} - Active work\\
+    \textcolor{pending}{█} \textbf{Pending} - Not yet started\\
+    \textcolor{fixed}{█} \textbf{Fixed} - Corrected errors
+};
+
+% ============================================================================
+% FOOTER
+% ============================================================================
+\node (footer) [below=1cm of legend, text width=7cm, align=center, font=\footnotesize] {
+    Generated: October 9, 2025\\
+    Repository: github.com/david-ewing-nz/David-Ewing-82171165-DATA420-A2\\
+    All helper functions organized in Cell 8 | Zero errors | Ready for execution
+};
+
+\end{tikzpicture}
+
+\end{center}
+
+\end{document}
