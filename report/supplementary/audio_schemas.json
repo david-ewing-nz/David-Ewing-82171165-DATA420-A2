@@ -1,0 +1,942 @@
+{
+  "AO": {
+    "fields": [
+      {
+        "name": "AO001",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO002",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO003",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO004",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO005",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO006",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO007",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO008",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO009",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO010",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO011",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO012",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO013",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO014",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO015",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO016",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO017",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO018",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO019",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "AO020",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "MSD_TRACKID",
+        "type": "StringType()",
+        "nullable": true
+      }
+    ],
+    "column_count": 21
+  },
+  "LP": {
+    "fields": [
+      {
+        "name": "LP001",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP002",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP003",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP004",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP005",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP006",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP007",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP008",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP009",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP010",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP011",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP012",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP013",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP014",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP015",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP016",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP017",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP018",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP019",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "LP020",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "MSD_TRACKID",
+        "type": "StringType()",
+        "nullable": true
+      }
+    ],
+    "column_count": 21
+  },
+  "SP": {
+    "fields": [
+      {
+        "name": "SP001",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP002",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP003",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP004",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP005",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP006",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP007",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP008",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP009",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP010",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP011",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP012",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP013",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP014",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP015",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "SP016",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "MSD_TRACKID",
+        "type": "StringType()",
+        "nullable": true
+      }
+    ],
+    "column_count": 17
+  },
+  "TI": {
+    "fields": [
+      {
+        "name": "TI001",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI002",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI003",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI004",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI005",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI006",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI007",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI008",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI009",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI010",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI011",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI012",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI013",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI014",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI015",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI016",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI017",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI018",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI019",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI020",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI021",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI022",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI023",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI024",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI025",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI026",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI027",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI028",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI029",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI030",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI031",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI032",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI033",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI034",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI035",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI036",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI037",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI038",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI039",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI040",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI041",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI042",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI043",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI044",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI045",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI046",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI047",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI048",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI049",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI050",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI051",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI052",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI053",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI054",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI055",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI056",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI057",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI058",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI059",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI060",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI061",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI062",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI063",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI064",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI065",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI066",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI067",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI068",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI069",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI070",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI071",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI072",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI073",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI074",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI075",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI076",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI077",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI078",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI079",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI080",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI081",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI082",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI083",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI084",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI085",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI086",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI087",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI088",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI089",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI090",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI091",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI092",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI093",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI094",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI095",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI096",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI097",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI098",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI099",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI100",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI101",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI102",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI103",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI104",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI105",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI106",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI107",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI108",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI109",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI110",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI111",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI112",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI113",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI114",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI115",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI116",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI117",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI118",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI119",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI120",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI121",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI122",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI123",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI124",
+        "type": "DoubleType()",
+        "nullable": true
+      },
+      {
+        "name": "TI125",
+        "type": "StringType()",
+        "nullable": true
+      }
+    ],
+    "column_count": 125
+  }
+}
