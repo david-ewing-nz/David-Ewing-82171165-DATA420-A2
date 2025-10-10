@@ -1,0 +1,8 @@
+dataset,path,size_bytes,size_gb,row_count,column_count
+audio-features,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/audio/features/,13125542239,12.224,0,0
+audio-attributes,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/audio/attributes/,105513,0.0,0,0
+genre,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/genre/,31585889,0.029,0,0
+main,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/main/,182869445,0.17,0,0
+tasteprofile,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/tasteprofile/,514256719,0.479,0,0
+tasteprofile-triplets,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/tasteprofile/triplets.tsv/,512139195,0.477,0,0
+tasteprofile-mismatches,wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/tasteprofile/mismatches/,2117524,0.002,0,0
