@@ -1,0 +1,63 @@
+{
+  "total_size_gb": 13.381,
+  "total_size_bytes": 14368616524,
+  "dataset_count": 7,
+  "datasets": [
+    {
+      "dataset": "audio-features",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/audio/features/",
+      "size_bytes": 13125542239,
+      "size_gb": 12.224,
+      "row_count": 0,
+      "column_count": 0
+    },
+    {
+      "dataset": "audio-attributes",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/audio/attributes/",
+      "size_bytes": 105513,
+      "size_gb": 0.0,
+      "row_count": 0,
+      "column_count": 0
+    },
+    {
+      "dataset": "genre",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/genre/",
+      "size_bytes": 31585889,
+      "size_gb": 0.029,
+      "row_count": 0,
+      "column_count": 0
+    },
+    {
+      "dataset": "main",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/main/",
+      "size_bytes": 182869445,
+      "size_gb": 0.17,
+      "row_count": 0,
+      "column_count": 0
+    },
+    {
+      "dataset": "tasteprofile",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/tasteprofile/",
+      "size_bytes": 514256719,
+      "size_gb": 0.479,
+      "row_count": 0,
+      "column_count": 0
+    },
+    {
+      "dataset": "tasteprofile-triplets",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/tasteprofile/triplets.tsv/",
+      "size_bytes": 512139195,
+      "size_gb": 0.477,
+      "row_count": 0,
+      "column_count": 0
+    },
+    {
+      "dataset": "tasteprofile-mismatches",
+      "path": "wasbs://campus-data@madsstorage002.blob.core.windows.net/msd/tasteprofile/mismatches/",
+      "size_bytes": 2117524,
+      "size_gb": 0.002,
+      "row_count": 0,
+      "column_count": 0
+    }
+  ]
+}
