@@ -1,0 +1,6 @@
+Quick fix for re import:
+
+In cell with "username = re.sub('@.*', '', getpass.getuser())", add this line before it:
+import re
+
+This will fix the NameError: name 're' is not defined
