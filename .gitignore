@@ -1,9 +1,6 @@
 # Virtual environment
 .venv/
 
-# VS Code settings
-.vscode/
-
 # Data folder (optional – comment this line if you want to keep data tracked)
 # data/
 

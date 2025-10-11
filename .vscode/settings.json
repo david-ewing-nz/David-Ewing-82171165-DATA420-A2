@@ -1,0 +1,172 @@
+{
+    // workspace trust and automation settings for DATA420-A2
+    // configured for David Ewing (82171165)
+    // workspace trust
+    "security.workspace.trust.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    // terminal automation - allow commands without confirmation
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.terminal.sendSequence",
+        "workbench.action.terminal.runSelectedText",
+        "workbench.action.terminal.runActiveFile",
+        "workbench.action.terminal.copyLastCommand",
+        "workbench.action.terminal.paste",
+        "workbench.action.terminal.clear",
+        "workbench.action.terminal.toggleTerminal"
+    ],
+    "terminal.integrated.confirmOnExit": "never",
+    "terminal.integrated.confirmOnKill": "never",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.experimentalLinkProvider": false,
+    // git automation - enable all git operations without prompts
+    "git.enabled": true,
+    "git.autorefresh": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.allowForcePush": true,
+    "git.confirmForcePush": false,
+    "git.confirmNoVerify": false,
+    "git.confirmEmptyCommits": false,
+    "git.enableCommitSigning": false,
+    "git.pruneOnFetch": true,
+    // script execution - allow without interruption
+    "powershell.scriptAnalysis.enable": true,
+    "powershell.integratedConsole.suppressStartupBanner": true,
+    // jupyter notebooks - read-only protection
+    "notebook.cellFocusIndicator": "gutter",
+    "notebook.confirmDeleteRunningCell": true,
+    "notebook.confirmRunningCellsOnSave": true,
+    // python configuration
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.executeInFileDir": false,
+    // file associations
+    "files.associations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    // file operations - allow without confirmation
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.hotExit": "off",
+    "files.trimTrailingWhitespace": true,
+    // task runner automation
+    "task.allowAutomaticTasks": "on",
+    "task.quickOpen.showAll": true,
+    "task.quickOpen.skip": true,
+    // debug automation
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.confirmOnExit": "never",
+    "debug.openDebug": "neverOpen",
+    "debug.showBreakpointsInOverviewRuler": false,
+    "debug.showInlineBreakpointCandidates": false,
+    // command palette and quick open
+    "workbench.commandPalette.preserveInput": false,
+    "workbench.quickOpen.closeOnFocusLost": false,
+    // extension management
+    "extensions.autoCheckUpdates": false,
+    "extensions.confirmReload": false,
+    // search and replace
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    // editor automation
+    "editor.confirmDelete": false,
+    "editor.confirmPaste": false,
+    "editor.minimap.enabled": false,
+    // window management
+    "window.confirmBeforeClose": "never",
+    "window.restoreWindows": "none",
+    // workbench automation
+    "workbench.editor.confirmDirtyDiff": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "none",
+    // disable shell integration completely to prevent extract command prompts
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.experimentalUseBuiltin": true,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.shellIntegration.suggestEnabled": false,
+    "terminal.integrated.shellIntegration.history": 0,
+    "terminal.integrated.enableShellIntegration": false,
+    "terminal.integrated.shellIntegration.showTerminalCommand": false,
+    "terminal.integrated.shellIntegration.showCommandFailed": false,
+    "terminal.integrated.shellIntegration.showCommandSucceeded": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "terminal.integrated.shellIntegration.commandDecorationsEnabled": "never",
+    "terminal.integrated.shellIntegration.confirmOnExit": "never",
+    "terminal.integrated.shellIntegration.enableCommandStorage": "never",
+    "terminal.integrated.suggest.enabled": false,
+    "terminal.integrated.suggest.runOnEnter": "never",
+    "terminal.integrated.shellIntegration.enableCommandHistory": false,
+    // additional automation to prevent extract command prompts
+    "terminal.integrated.allowChords": true,
+    "terminal.integrated.allowMnemonics": true,
+    // command line and execution automation
+    "workbench.action.terminal.allowLargeOutput": true,
+    "workbench.action.terminal.clear": true,
+    "workbench.action.terminal.copyLastCommand": true,
+    "workbench.action.terminal.paste": true,
+    "workbench.action.terminal.runActiveFile": true,
+    "workbench.action.terminal.runSelectedText": true,
+    "workbench.action.terminal.toggleTerminal": true,
+    // security and trust automation
+    "security.workspace.trust.manageFolder": true,
+    "security.workspace.trust.manageWorkspace": true,
+    "security.promptForLocalFileProtocolHandling": false,
+    "security.promptForRemoteFileProtocolHandling": false,
+    "security.restrictUNCAccess": false,
+    // command execution and automation
+    "workbench.action.tasks.runTask": true,
+    "workbench.action.tasks.terminate": true,
+    "workbench.action.tasks.showLog": false,
+    "workbench.action.debug.start": true,
+    "workbench.action.debug.stop": true,
+    "workbench.action.debug.restart": true,
+    "workbench.action.debug.pause": true,
+    "workbench.action.debug.stepOver": true,
+    "workbench.action.debug.stepInto": true,
+    "workbench.action.debug.stepOut": true,
+    // python specific automation
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.focusAfterLaunch": false,
+    // jupyter specific automation
+    "jupyter.askForKernelRestart": false,
+    "jupyter.askForImportRestart": false,
+    "jupyter.confirmCellRun": false,
+    "jupyter.disableJupyterAutoStart": true,
+    "jupyter.enableKeyboardShortcuts": true,
+    "jupyter.runStartupCommands": [],
+    // additional git settings
+    "git.showCommitInput": true,
+    "git.showInlineOpenFileAction": false,
+    "git.showProgress": false,
+    "git.showPushSuccessNotification": false,
+    "git.showUnpublishedCommits": false,
+    "git.showUntrackedFiles": false,
+    // scm settings
+    "scm.showActionButton": false,
+    "scm.showIncomingChanges": false,
+    "scm.showOutgoingChanges": false,
+    // testing automation
+    "testing.autoRun.mode": "all",
+    "testing.openTesting": "neverOpen",
+    // additional settings for complete automation
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": "never",
+    "security.workspace.trust.startupPrompt": "never",
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "hidden",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.tips.enabled": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "workbench.welcomePage.enabled": false,
+    // disable extract command line prompts specifically
+    "terminal.integrated.shellIntegration.extractCommand": false,
+    "terminal.integrated.shellIntegration.extractCommandEnabled": false,
+    "terminal.integrated.shellIntegration.commandDetection": false,
+    "terminal.integrated.shellIntegration.commandLinksEnabled": false,
+    "terminal.integrated.shellIntegration.commandHover": false,
+    "terminal.integrated.shellIntegration.commandPalette": false,
+    "terminal.integrated.shellIntegration.commandContextMenu": false
+}
