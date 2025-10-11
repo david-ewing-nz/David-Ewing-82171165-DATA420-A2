@@ -168,5 +168,6 @@
     "terminal.integrated.shellIntegration.commandLinksEnabled": false,
     "terminal.integrated.shellIntegration.commandHover": false,
     "terminal.integrated.shellIntegration.commandPalette": false,
-    "terminal.integrated.shellIntegration.commandContextMenu": false
+    "terminal.integrated.shellIntegration.commandContextMenu": false,
+    "testing.automaticallyOpenTestResults": "neverOpen"
 }
