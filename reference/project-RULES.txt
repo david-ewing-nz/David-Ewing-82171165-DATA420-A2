@@ -1,0 +1,356 @@
+
+PROJECT RULES (FOR DAVID EWING - 82171165)
+Last updated: 2025-10-11 (hprint() function adopted)
+
+---
+
+GENERAL RULES
+
+- refer to me as: davide
+- Set author name in latex as: David Ewing (82171165).
+- Set GitHub username as: david-ewing-nz
+- set email in all instances as: dew59@uclive.ac.nz
+- Use British English in all responses.
+- Use British English conventions for programming comments.
+- Use British English for function naming (e.g., `visualise` instead of `visualize`).
+- Use lower-case phrases in comments and not complete sentences - no capital letters except when referencing programming languages commands and arguments.
+- When technical conventions conflict with British English (e.g., `color` in code), prioritise the programming convention.
+- Use xelatex for LaTeX output.
+- Use the random seed 82171165 for reproducibility.
+- No silent changes to code. the agent do not rename variables or modify logic unless the agent ask.
+- Agent must read and follow all rules in this document before each response.
+- One label per cell. Exactly one PAT (see below) at the very top of a cell.
+- No extra files/snippets unless  davide  ask.
+- no comments about choice or options or optional.
+- all comments are to be for a third party who is grading this solution
+- Helper fucnctions are not to be reduced in size or content. These are used common amongst more than one file. Make no changes without agreement with davide.
+
+---
+
+PROJECT STRUCTURE RULES
+
+- scripts/ - for Python scripts, PowerShell (.ps1), and batch (.bat) files used for automation and utilities
+- code/ - for main assignment code/notebooks
+- reference/ - for assignment materials and documentation
+- report/ - for report files
+
+---
+
+AUTOMATION & AGENT RULES
+
+- Workspace is trusted - agent can perform actions without confirmation where possible
+- Terminal commands execute automatically without prompts
+- Scripts run without interruption
+- Git operations are fully automated (push, pull, commit, etc.)
+- Jupyter notebooks are protected - no modifications without explicit permission from davide
+- When confirmation is required, agent should determine if there is a global/long-term setting to enable automation
+- VS Code settings configured in .vscode/settings.json for maximum automation
+- PowerShell execution policy set to RemoteSigned for local script execution
+
+---
+
+DEVELOPMENT ENVIRONMENT RULES
+
+**TWO-ENVIRONMENT ARCHITECTURE:**
+- Environment 1: VS Code Development (where agent operates)
+  * Platform: Windows VS Code workspace at d:\github\ghcn-notebooks
+  * Purpose: Code editing, git operations, notebook management
+  * Limitations: NO Spark access, NO Azure Kubernetes connectivity, NO execution capabilities
+  * Agent operates ONLY in this environment
+
+- Environment 2: Azure Kubernetes Spark Cluster (where davide executes)
+  * Platform: Azure AKS with Spark containers (madsregistry001.azurecr.io/hadoop-spark:v3.3.5-openjdk-8)
+  * Storage: Azure Blob Storage (madsstorage002.blob.core.windows.net)
+  * Purpose: Distributed Spark execution, big data processing
+  * Access: Direct SAS token authentication to campus-data and campus-user containers
+
+**CRITICAL AGENT LIMITATIONS:**
+- Agent CANNOT run Spark sessions or execute notebook cells
+- Agent CANNOT access Azure Blob Storage or run hdfs commands
+- Agent CANNOT execute start_spark() function or any Spark operations
+- Agent can ONLY edit files, perform git operations, and analyse code
+
+**REPOSITORY TRANSFER WORKFLOW:**
+- Code development happens in VS Code environment (agent assists)
+- Git repository serves as bridge between environments
+- davide pulls code to Spark environment for execution
+- This is the ONLY method for code transfer - no direct execution by agent
+
+**DO NOT:**
+- Attempt to run notebook cells or execute Spark code
+- Suggest direct execution of Spark operations
+- Offer to start Spark sessions or test code functionality
+- Propose alternatives to the repository transfer method
+---
+
+INTERPRETATION & EXECUTION RULES
+
+- Follow all instructions explicitly.
+- Do not summarise, reword, or omit details from assignment instructions unless explicitly directed by davide.
+- Do not generalise or rely on typical workflows.
+- When ambiguities arise:
+  - Ask for clarification immediately.
+  - Proceed with a documented assumption only if you have sought clarity and not received it and then ensure you let davide know thta it wasn't clear and what your intnetions are in advance of acting.
+  - Clearly state in the next response if clarification is still pending.
+
+---
+
+WORKFLOW CONTROL RULES
+
+- STOP-AND-CONFIRM: When davide states a specific course of action (e.g., "wait for results"),
+  the agent MUST NOT proceed beyond that step without explicit permission.
+- SINGLE-STEP FOCUS: Address only the current step being discussed. Do not propose
+  multiple future steps unless explicitly requested.
+- WAIT-STATE CLARITY: When davide says "wait for X" or "after we see Y", the agent
+  enters WAIT mode and provides no further action until X or Y is provided.
+- ASK-BEFORE-ASSUME: If the next action is unclear, ask "What would you like to do next?"
+  rather than proposing multiple options.
+
+---
+
+DISCUSSION-BEFORE-CODE RULES
+
+- ANALYSIS-FIRST PRINCIPLE: When davide asks questions, provide analysis and answers ONLY.
+- NO-CODE-IN-PROSE-UNLESS-REQUESTED: If davide's prompt contains question marks (?), respond with
+  analysis/answers only - no code unless explicitly requested.
+- CODE-TRIGGER PHRASES: Only provide code when davide uses explicit phrases:
+  * "show me the code"
+  * "write the code"
+  * "implement this"
+  * "create the cells"
+- CONFIRMATION-REQUIRED: Before writing code, ask: "Should I implement this now or
+  continue the discussion?"
+
+---
+
+PACED WORKFLOW RULES
+
+- ONE-TOPIC-ONLY: Focus on exactly one topic per response unless davide explicitly
+  asks for multiple topics.
+- SEQUENTIAL-ONLY: Present information sequentially, not in parallel options.
+- COMPLETION-BEFORE-NEXT: Wait for davide to indicate completion of current topic
+  before introducing new topics.
+- BREVITY-FIRST: Start with brief summary, then ask if more detail is needed.
+- INTERRUPT-FRIENDLY: If davide changes topic mid-discussion, immediately switch
+  focus without referencing the previous topic.
+
+---
+
+PACE-CONTROL SIGNALS
+
+- "WAIT" = Agent enters hold state, no further action
+- "NEXT" = Agent may proceed to next logical step
+- "DETAILS" = Agent may provide more depth on current topic
+- "ENOUGH" = Agent stops current explanation immediately
+- "DIFFERENT" = Agent switches topics without transition
+
+---
+
+RESPONSE-TYPE CONTROL
+
+- Questions (?) = Analysis/explanation only, no code
+- Statements = Follow the statement's implication
+- "Implement" = Code may be provided
+- "Discuss" = Theory/options only, no implementation
+
+---
+
+RESPONSE STRUCTURE & OUTPUT RULES
+
+- when a prompt is a question, the agent will answer the question. The agent will not be presenting code of any sort, or take any action unless it is agreed to by davide.
+- there will probably be more than one question, ensure that davide is ready to receive a prose in the form of an update to a file, the creating of an automated process or the building of a code snippet or file.
+- Include all detailed instructions as bullet points in the agentr response.
+- Reproduce all required:
+  - Explanations (with exact word limits if provided)
+  - Named variables
+  - Named plots
+  - Required tools or libraries
+- Use the same terminology as in the original instructions.
+  - If variable names are defined in instructions or instruction document or uploaded code, use the variable name in the instruction without modification and notify me of this.
+  - Retain phrases like "explain in 75 words" exactly as written.
+
+---
+
+CODE BEHAVIOUR RULES
+
+
+
+   The Spark and Kubernetes environments are set up in the first few Jupyter cells - they are not to be changed
+   When code is uploaded to davide:
+   - do not expect davide to use it. davide may use it to tweek existing code. Please review in detail and recognise patterns that davide may be using.
+   - Observe and preserve davide’s variable naming choices unless precede by instruction document or assignment document.
+   When asked to complete a step:
+    Provide the step instructions first.
+
+  Only generate code/output after davide confirms (unless explicitly instructed to proceed).
+  Note that often multiple questions using multiple prompts are asked before code is requested.
+  Do not assume the prose is to include code ask for clarification if it is ambiguous.
+- Comments in code should be brief phrases, not complete sentences.
+- do not provide code with the response as the default. the agent can suggest but often there are more than one questions davide may have that need to be answered in advance of any code and davide may not always want the code such that davide can build a better understanding
+- if davide provides the agent a code to modify, ensure if there are patterns in comments that they are not touched.
+- do not delete code that is commented out - it serves a purpose. note alignments this is usually part of what he wants.
+- do not proide comment to davide in the code, the comments are for others to view.
+- do not provide options in the comments.
+---
+
+  EXPLANATIONS & REPORTING RULES
+
+  If instructions are provide, Explicitly mention and follow any:
+  - Word limits
+  - Focus areas
+  - Section-specific structure (e.g., Background, Processing, Analysis)
+  Provide:
+  - Tables, figures, summaries, and answers as requested
+  - Concise, complete summaries without omitted steps
+- Do not include screenshots or code unless explicitly requested.
+
+---
+
+EXECUTION PATH DIAGRAM (EPD) RULES
+-------------------------------------
+- **Definition**: An Execution Path Diagram (EPD) is a visual representation showing:
+  * Sequential operations (Step 1 → 2 → 3)
+  * Decision points (EXISTS vs NOT EXISTS)
+  * Data flow annotations (READ FROM / WRITE TO)
+  * Path convergence points (where branches merge)
+- **Format**: ASCII box-and-arrow diagrams using Unicode box-drawing characters:
+  * ┌─────┐ for process boxes
+  * │     │ for borders
+  * └─────┘ for corners
+  * ───┬─── for branch points
+  * ▼ for direction arrows
+- **Purpose**: Document complex logic flows, conditional branches, and execution sequences
+- **Usage**: Include EPDs in documentation, proposals, and technical summaries when explaining:
+  * Multi-step workflows with decision points
+  * Conditional logic with multiple paths
+  * Data flow between components/systems
+  * Algorithm execution sequences
+- **When to Use**:
+  * Before implementing complex features (planning phase)
+  * When explaining logic to davide for review
+  * In technical documentation for future reference
+- **Style**: Professional, clear, concise - no decorative elements, only functional flow elements
+
+---
+
+PAT (Process/Analysis Answer Tagging) RULES
+-------------------------------------
+Thte PAT Tag or PAT Header is the first 3 lines in a cell.
+A PAT Tag is required for each cell we develope but not for cells provided to us.
+The first line is a function call to hprint().
+The argument is a single string.
+It is used to print a unique identifier made up of :
+  the question number
+  the (subquestion number)
+  a unique number.
+The second line is a comment and being s with
+ # supports: <text that explicitly states the quesion>
+The third llie is a comment and begins with
+  # does: <sentenses that describe the content of the cell itself>
+
+if the cell does not support a specific question list the quetions it does support
+if the cell is infastructual (has only helper functions or declares general variable, just thaty in the hprint() argument -  25 letters or less.
+Processing question example:
+  hprint("Analysis Answer: Q4(b)63")
+  # supports: Q4(b) — "How many station IDs are in stations but not in daily?"
+  # does: computes stations \ daily via left_anti and prints counts/samples.
+
+Analysis quetion example:
+  hprint("Analysis Answer: Q4(b)63")
+  # supports: Q4(b) — "How many station IDs are in stations but not in daily?"
+  # does: computes stations \ daily via left_anti and prints counts/samples.
+
+
+PAT PROMPT
+-------------------------
+- “restart PAT” — the agent is to resume tagging with the cell given or the next cell after the current cell processed.
+- “PAT:” + cell content — the agent reply with the PAT
+- Renumbering — We don’t backfill; the global serial just keeps increasing.
+
+---
+
+# ========== NOTEBOOK CHANGE TRACKING RULES (REMOVABLE SECTION) ==========
+# Added: 2025-10-11 | Status: EXPERIMENTAL | Can be deleted if not needed
+# START_SECTION: NOTEBOOK_CHANGE_TRACKING
+
+NOTEBOOK CHANGE TRACKING RULES
+-------------------------------------
+
+**SCOPE: FORWARD-ONLY IMPLEMENTATION**
+- These rules apply to ALL future notebook modifications from this point forward
+- NO retroactive documentation required for existing notebooks or past changes
+- Existing notebooks continue as-is unless being actively modified
+
+**MANDATORY CHANGE DOCUMENTATION:**
+- Every notebook modification MUST be documented in a corresponding CHANGES.md file
+- File naming convention: `[NOTEBOOK_NAME]-CHANGES.md` (e.g., `20251012Z-CHANGES.md`)
+- Location: Same directory as the notebook (`code/` folder)
+
+**CHANGE LOG STRUCTURE REQUIREMENTS:**
+- **Header**: Notebook name, version, and last updated date
+- **Overview**: Brief description of notebook purpose and change tracking scope
+- **Change History**: Chronological record with dates, objectives, and detailed modifications
+  * Before/after code comparisons for significant changes
+  * Cell numbers and line ranges for precise change location
+  * Impact analysis and performance implications
+- **Status Tracking**: Clear indicators for completed (✅), in-progress (🔄), and planned changes
+- **Future Plans**: Roadmap for remaining implementations with priority levels
+- **Quality Assurance**: Testing approach, validation criteria, and success metrics
+
+**CHANGE ENTRY REQUIREMENTS:**
+Each change entry MUST include:
+- **Date**: ISO format (YYYY-MM-DD)
+- **Cell Reference**: Cell number (not ID) and approximate line range
+- **Change Type**: Classification (Feature, Bug Fix, Performance, Refactor, Documentation)
+- **Objective**: Clear statement of what was being accomplished
+- **Before/After**: Code snippets showing exact modifications
+- **Impact**: Performance, functionality, or workflow implications
+- **Status**: Completion status with validation notes
+
+**AGENT RESPONSIBILITIES:**
+- Create CHANGES.md file for any notebook being modified
+- Update change log BEFORE making notebook modifications
+- Document rationale and design decisions for all changes
+- Maintain British English throughout all documentation
+- Include references to related files (FILE_OPERATION_MAP.md, etc.)
+
+**DAVIDE REVIEW REQUIREMENTS:**
+- Change logs must be reviewed and approved before notebook execution
+- Significant changes require explicit confirmation from davide
+- Change logs serve as the primary record for assignment documentation
+
+**CHANGE CLASSIFICATION SYSTEM:**
+- **CRITICAL**: Changes affecting core functionality or data processing logic
+- **PERFORMANCE**: Optimisations, caching, or efficiency improvements
+- **ENHANCEMENT**: New features or expanded capabilities
+- **MAINTENANCE**: Code cleanup, documentation, or organisational changes
+- **BUG FIX**: Corrections to identified issues or errors
+
+**VERSION CONTROL INTEGRATION:**
+- Change logs complement git commits but provide detailed technical context
+- Each change log entry should reference relevant git commit hashes when applicable
+- Change logs must be committed with notebook modifications
+
+**SYSTEMATIC IMPLEMENTATION TRACKING:**
+For systematic changes (like file existence checking):
+- Document the overall pattern being implemented
+- Track implementation status across all affected operations
+- Maintain comprehensive operation maps (like FILE_OPERATION_MAP.md)
+- Include performance benchmarks and testing results
+
+**COMPLIANCE VERIFICATION:**
+Before any notebook modification, agent must:
+1. Create or update the corresponding CHANGES.md file
+2. Document the planned changes with rationale
+3. Obtain davide's approval for significant modifications
+4. Execute changes with precise documentation
+5. Update change log with completion status and validation results
+
+# END_SECTION: NOTEBOOK_CHANGE_TRACKING
+# ========== END REMOVABLE SECTION ==========
+
+---
+
+update from last agent:
+
+2025-10-11: Updated PAT rules to use hprint() instead of bprint() function calls.
